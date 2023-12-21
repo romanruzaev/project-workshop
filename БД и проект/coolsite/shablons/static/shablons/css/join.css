@@ -1,0 +1,127 @@
+#form__container {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    background-color: #262626;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#lobby__form {
+    padding: 2em;
+    padding-top: 1.6em;
+    
+}
+
+.btn__flex {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    text-align:justify;
+}
+
+.btn__flex select, input {
+    box-sizing: border-box;
+    color: #fff;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 10px;
+    font-size: 15px;
+    background-color: #3f434a;
+}
+
+::placeholder {
+    color: #8a8a8a;
+    font-size: 20px;
+    font-style:italic;
+    padding-left: 40px;
+}
+
+.text__mid {
+    vertical-align: middle;
+    margin-bottom: 0px;
+}
+
+.right__btn {
+    margin-left: 50px;
+}
+
+#document {
+    font-size: 15px;
+    line-height: 1.7em;
+}
+
+
+
+#form__container__header {
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #363739;
+    margin: 0;
+    font-size: 18px;
+    font-size: 300;
+    line-height: 0;
+}
+
+.form__field__wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.form__field__wrapper label {
+    font-size: 18px;
+    line-height: 1.7em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form__field__wrapper button {
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: #845695;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.choice__place {
+    display: flex;
+}
+
+/* .id_standard_chapters{
+    display: flex;
+} */
+
+.main__text {    
+    /* font-size: 16px; */
+    /* font-weight: bold;     */
+    margin: 7px 0 7px 0;
+    display: inline-flex;
+    align-items: center;
+}
+/* #id_work {    margin: 4px 0 0 0;
+        display: inline-flex;    font-size: 18.72px;
+    } */
+
+#id_Soderzanie, #id_Vvedenie, #id_Zakluchenie, #id_List_of_use_sources {
+    margin: 1px 0 0 5px;
+    display: inline-flex;    
+    width: 22px;
+    }
+
+/* #id_Soderzanie1, #id_Vvedenie, #id_Zakluchenie, #id_List_of_use_sources {
+    margin: 1px 0 0 5px;
+    } */

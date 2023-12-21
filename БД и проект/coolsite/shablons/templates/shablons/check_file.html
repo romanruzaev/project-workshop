@@ -1,0 +1,32 @@
+               {% extends "shablons/wrapper_h.html" %}
+                {% block content %}
+
+                <div id="form__container__header">
+                    <p>Проверка по ГОСТу⚠️</p>
+                </div>
+
+                <form id="lobby__form" action method = "post">
+                    <div class="form__field__wrapper" style="margin-bottom: 0px;">
+                        <label>Выберите файл для проверки:</label>
+                        <input type="file" id="document" name="document"  style="padding: 10px 10px 10px 10px;">
+                        <p id="feedback"></p>
+                        <!-- <button type="button" id="check__btn" >Проверить</button> -->
+                        <div class="btn__flex">
+                            <button style="font-size: 1.05em;"onclick=""><strong>Проверить 🔮</strong></button>
+                            <button style="font-size: 1.05em;" class="right__btn" onclick=""><strong>Отмена ⛔</strong></button>
+                        </div>
+                    </div>
+                </form>
+
+                {% endblock %}
+
+
+
+
+                
+            <!-- </div> -->
+        <!-- </main> -->
+    <!-- </body> -->
+    <!--<script type="text/javascript" src='js/create.js'></script>-->
+
+<!-- </html> -->

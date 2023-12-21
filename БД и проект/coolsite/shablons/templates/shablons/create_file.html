@@ -1,0 +1,168 @@
+
+                {% extends "shablons/wrapper_h.html" %}
+                {% block content %}
+                <div id="form__container__header">
+                    <p>⚙️Настройка создаваемого файла</p>
+                </div>
+                <form id="lobby__form" action="{% url 'shablons:create' %}" method="post">
+                    {% csrf_token %}
+                    <div class="btn__flex">
+                        <label class="text__mid">Преподаватель:&ensp;&ensp;</label>
+                        
+                        
+                        {{form.professor}}
+                        
+                        
+                        
+                        
+                        <!-- <select id="select__action">
+                            <option value="">Данилова Л.Ф.</option>
+                            <option value="">Самков T.Л.</option>
+                            <option value="">Пушкарева Г.B.</option>
+                            <option value="">Моргунов A.B.</option>
+                        </select> -->
+                        <!-- <p class="text__mid">{{form.professor}}</p> -->
+                    </div>
+
+                    <div class="btn__flex">
+                        <label>Предмет:&ensp;&ensp;</label>
+                        {{form.course}}
+                        <!-- <select id="select__action">
+                            <option value="">МБП</option>
+                            <option value="">ПИ</option>
+                            <option value="">БД</option>
+                            <option value="">OC</option>
+                            <option value="">ИнфИПрог</option>
+                            <option value="">Web-технологии</option>
+                        </select> -->
+                    </div>
+
+                    <div class="btn__flex" style="display: block; background-color: #444951; border-radius: 8px; padding: 5px 5px 5px 5px">
+                        <label>Если предмета или преподавателя нет в списке, выберите файл c подходящим титульным листом:&ensp;&ensp;</label>
+                        {{form.file_field}}
+                        <!-- <input type="file" id="document" name="document" style="display: block; background-color: #444951; border-radius: 8px; padding: 5px 5px 5px 5px"> -->
+                    </div>
+
+                    <div class="btn__flex">
+                        <label style="white-space: nowrap;">ФИО студента:&ensp;&ensp;</label>
+                        {{form.FIO}}
+                        <!-- <input type="text" name="FIO"/> -->
+                    </div>
+
+                    <!-- <div class="btn__flex" > -->
+                        <!-- <label style="white-space: nowrap; margin-top: 5px;">Место назначения:&ensp;&ensp;</label> -->
+                        <!-- <input type="file" id="document" name="document" style="padding: 5px 5px 5px 5px"> -->
+                        <!-- {{form.save}} -->
+                    <!-- </div> -->
+
+                    <div class="btn__flex" >
+                        <label style="white-space: nowrap;">Выберите необходимые главы: &ensp;⤵</label>
+                    </div>
+                    <div class="btn__flex" style="justify-content: space-between; background-color: #444951; border-radius: 8px; padding: 5px 20px 5px 20px">
+                        <!-- class="btn__flex" -->
+                        <!-- <div>
+                            <input type="checkbox" id="coding" name="interest" value="coding" />
+                            <label for="coding" style="padding-left: 25px;">Содержание</label>
+                        </div> -->
+                        <!-- <div>
+                            <input type="checkbox" id="coding" name="interest" value="coding" />
+                            <label for="coding" style="padding-left: 26px;">Введение</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="coding" name="interest" value="coding" />
+                            <label for="coding" style="padding-left: 30px;">Заключение</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="coding" name="interest" value="coding" />
+                            <label for="coding" style="padding-left: 30px;">Список использованных источников</label>
+                        </div>-->
+                        <!-- <label for="coding" style="padding-left: 25px;">Содержание</label> -->
+                        <!-- <div style = "display: flex;"> -->
+
+
+                            <!-- <div class="main__text">   -->
+                            <!-- <div class="main__text">
+                                Содержание {{form.Soderzanie}}
+                                Введение {{form.Vvedenie}}
+                                Заключение {{form.Zakluchenie}}
+                                Список{{form.List_of_use_sources}}
+                            </div>  -->
+                            
+                            <!-- <div class="choice__place"> 
+                                <p class="main__text">Содержание
+                                    <div name="pol" id="id_Soderzanie"> 
+                                        {{form.Soderzanie}} 
+                                    </div> 
+                                </p> 
+                            </div>
+
+                            <div class="choice__place"> 
+                                <p class="main__text">Введение
+                                    <div name="pol" id="id_Vvedenie"> 
+                                        {{form.Vvedenie}} 
+                                    </div> 
+                                </p> 
+                            </div>
+
+                            <div class="choice__place"> 
+                                <p class="main__text">Заключение
+                                    <div name="pol" id="id_Zakluchenie"> 
+                                        {{form.Zakluchenie}} 
+                                    </div> 
+                                </p> 
+                            </div>
+
+                            
+                            <div class="choice__place"> 
+                                <p class="main__text">Список использованных источников
+                                    <div name="pol" id="id_List_of_use_sources"> 
+                                        {{form.List_of_use_sources}} 
+                                    </div> 
+                                </p> 
+                            </div> -->
+
+
+                        <!-- </div> -->
+                        {% for choice in form.standard_chapters %}
+                            {{ choice }}
+                        {% endfor %}
+                        <!-- {{form.standard_chapters}} -->
+                    </div>
+
+                    <div class="btn__flex">
+                        <label style="white-space: nowrap;">Введите названия глав по вашей теме. Каждое название c новой строки.&ensp;⤵</label>
+                    </div>
+                    <div class="btn__flex">
+                        <!-- <textarea rows='6' style="width: 100%; font-size: 16px; background-color: #444951; border-radius: 8px; padding: 5px 5px 5px 5px; color: #fff;" placeholder="Введите названия своих глав..."></textarea> -->
+                        {{form.own_chapters}}
+                    </div>
+
+                    <div class="form__field__wrapper" style="margin-bottom: 0px;">
+                        <div class="btn__flex">
+                            <!-- <a href="#" download="tst.docx">Скачать файл</a> -->
+
+                            <a class ></a>
+
+
+                            <!-- <a href="#" download="1.txt">dsfsdf</a> -->
+                            
+                            
+                            
+                            <!-- <button type = "submit" form = "lobby__form" style="font-size: 1.05em;" onclick="document.location='result'" ><strong>Создать 🔮</strong></button> -->
+                            <!-- <input id="lobby__form" type="submit" value="Создать 🔮"> -->
+                            <!-- <input id="btno" type="submit" value="Рассчитать"> -->
+                            <!-- <button style="font-size: 1.05em;" class="right__btn" onclick=""><strong>Отмена ⛔</strong></button> -->
+                        </div>
+                    </div>
+                </form>
+                
+                {% endblock %}
+
+
+
+            <!-- </div> -->
+        <!-- </main> -->
+    <!-- </body> -->
+
+    
+<!-- </html> -->

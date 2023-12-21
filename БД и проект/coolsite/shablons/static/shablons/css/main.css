@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 7px; 
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #797a79;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #845695;
+}
+
+body{
+    background-color: #1a1a1a;
+    color: #fff;
+    font: 14px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#room__lobby__container {
+    margin-top: 84px;
+}
+
+/* .id_standard_chapters{
+    display: flex;
+} */
+
+.choice__place {
+    display: flex;
+}
+
+/* .id_standard_chapters{
+    display: flex;
+} */
+/* 
+.main__text {    
+    font-size: 10.72px;
+    font-weight: bold;
+    margin: 1px 0 7px 0;
+    display: flex;} */
+
+/* #id_standard_chapters {    
+    margin: 4px 0 0 0;
+    display: inline-flex;    
+    font-size: 18.72px;
+    } */
+
+/* #id_Soderzanie, #id_Vvedenie, #id_Zakluchenie, #id_List_of_use_sources {
+    margin: 1px 0 0 0;
+    display: inline-flex;   
+
+    /* font-size: 18.72px; */
+    
+
+/* input[type=checkbox] { 
+    transform: scale(1.5); 
+} */

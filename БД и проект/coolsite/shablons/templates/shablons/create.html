@@ -1,0 +1,30 @@
+
+
+
+                {% extends "shablons/wrapper_h.html" %}
+                {% block content %}
+
+
+                <div id="form__container__header">
+                    <p>📜 C чем вам нужна помощь❓</p>
+                </div>
+
+                <form id="lobby__form">
+                    <div class="form__field__wrapper" style="margin-bottom: 0px;">
+                        <label>Выберите действие:</label>
+                        <div class="btn__flex">
+                            <button type="button" onclick="document.location='create_file'">Создать файл-шаблон</button>
+                            <button type="button" class="right__btn" onclick="document.location='check_file'">Проверить оформление</button>
+                            <!-- onclick="document.location='create_file'" -->
+                        </div>
+                    </div>
+                </form>
+
+                {% endblock %}
+
+
+            <!-- </div>
+        </main>
+    </body>
+</html> -->
+
